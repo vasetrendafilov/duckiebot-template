@@ -1,0 +1,13 @@
+dts devel build -f -u vase
+docker run -it --rm  -v ~/Downloads/data:/data --name vase vase/ros_template:v2-amd64 
+docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix/ --rm --name vase vase/ros_template:v2-amd64 # sometimes works
+# on duckie 
+dts devel build -f -u vase -H patka1.local
+
+docker -H patka1.local run -it --rm  -v /data:/data --name vase --privileged --network=host -dit --restart unless-stopped -e ROBOT_TYPE=<ROBOT_TYPE> vase/ros_template:v2-arm64v8 
+
+docker -H patka1.local run -it --rm  -v /data:/data --name vase --privileged --network=host  vase/ros_template:v2-arm64v8  #works
+
+
+
+docker -H patka1.local run --name duckiebot-interface -v /data:/data -e ROBOT_TYPE=duckiebot --privileged --network=host -dit --restart unless-stopped  vase/dt-duckiebot-interface:daffy-arm64v8

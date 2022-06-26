@@ -1,11 +1,7 @@
-# Template: template-ros
+# Template: Duckiebot-template
 
 This template provides a boilerplate repository
 for developing ROS-based software in Duckietown.
-
-**NOTE:** If you want to develop software that does not use
-ROS, check out [this template](https://github.com/duckietown/template-basic).
-
 
 ## How to use it
 
@@ -29,7 +25,7 @@ List the dependencies in the files `dependencies-apt.txt` and
 
 ### 4. Place your code
 
-Place your code in the directory `/packages/` of
+Place your code in the directory `/packages/duckiebot` of
 your new repository.
 
 
