@@ -1,6 +1,0 @@
-# on host 
-dts devel build -f -u vase
-docker run -it --rm  -v ~/Downloads/data:/data --name vase vase/dt-duckiebot-interface:v2-amd64 
-# on duckie
-docker -H patka1.local build -t vase:v1 .
-docker -H patka1.local run -it --rm  -v /data:/data --name vase --privileged --network=host vase:v1

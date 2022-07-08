@@ -26,9 +26,9 @@ List the dependencies in the files `dependencies-apt.txt` and
 ### 4. Place your code
 
 Place your code in the directory `packages/duckiebot` of your new repository. The package contains:
-* Main file is placed in `src/duckiebot.py`.
-* Library for communicating with the robot is in `include/my_package/lib_duckiebot.py`.
-* Roslaunch file in `launch/duckiebot.launch` for launching the main file.
+* Main file is placed in `src/duckiebot.py`
+* Library for communicating with the robot is in `include/my_package/lib_duckiebot.py`
+* Roslaunch file in `launch/duckiebot.launch` for launching the main file
 
 ### 5. Setup launchers
 
